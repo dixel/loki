@@ -16,8 +16,15 @@ especially when it comes to comparing/merging the results from different databas
 
 ## Usage
 
-```
+### Make sure [clojure command-line tools](https://clojure.org/guides/getting_started) are installed
+
+### Build loki jar
+
+```bash
 clojure -Adepstar loki.jar
+```
+
+```bash
 LOKI_DATABASES='{:h2 {:dbtype "h2" :dbname "example"}}' java -cp loki.jar clojure.main -m loki.core
 
 # (<MODE> <DATABASE NAME> <QUERY>)

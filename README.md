@@ -27,6 +27,17 @@ LOKI_DATABASES='{:h2 {:dbtype "h2" :dbname "example"}}' java -cp loki.jar clojur
 # QUERY = "STRING" | symbols
 ```
 
+## Configuration
+
+The configuration is `EDN` string with the list of database configurations you'd like to query. The format should reflect the requirements
+listed in [next-jdbc documentation](https://cljdoc.org/d/seancorfield/next.jdbc/1.0.12/api/next.jdbc#get-datasource)
+Any database driver that you plan to use should be in the classpath.
+
+### Example
+```bash
+LOKI_DATABASES='{:postgres {:user "postgres" :password "postgres" :dbtype "postgres"}}' java -cp loki.jar:$HOME/Downloads/postgresql-42.2.9.jar clojure.main -m loki.core
+```
+
 ## Modes
 
 ### 1. Print the output of the SQL query as an ASCII-table

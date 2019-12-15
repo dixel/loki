@@ -2,7 +2,8 @@
 
 Command line utility to query JDBC-like databases with Clojure REPL.
 
-<script id="asciicast-VJSgJNCN8irlaWuDDVnFa8Qjf" src="https://asciinema.org/a/VJSgJNCN8irlaWuDDVnFa8Qjf.js?autoplay=true&loop=true&speed=2&size=big&rows=15" async></script>
+[![asciicast](https://asciinema.org/a/VJSgJNCN8irlaWuDDVnFa8Qjf.svg)](https://asciinema.org/a/VJSgJNCN8irlaWuDDVnFa8Qjf?autoplay=true&loop=true&speed=2&size=big&rows=15)
+
 
 ## Usage
 

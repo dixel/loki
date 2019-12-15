@@ -1,0 +1,12 @@
+{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        com.taoensso/timbre {:mvn/version "4.10.0"}
+        com.fzakaria/slf4j-timbre {:mvn/version "0.3.14"}
+        seancorfield/next.jdbc {:mvn/version "1.0.12"}
+        com.h2database/h2 {:mvn/version "1.4.199"}
+        cheshire {:mvn/version "5.8.0"}
+        clj-time {:mvn/version "0.14.4"}
+        cyrus/config {:mvn/version "0.3.1"}
+        com.bhauman/rebel-readline {:mvn/version "0.1.4"}
+        org.clojure/data.csv {:mvn/version "0.1.4"}}
+ :aliases {:depstar {:extra-deps {seancorfield/depstar {:mvn/version "0.3.4"}}
+                     :main-opts ["-m" "hf.depstar.uberjar"]}}}

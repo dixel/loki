@@ -4,4 +4,7 @@ example.mv.db
 example.trace.db
 loki.jar
 pom.xml
-result.csv
+.rebel_readline_history
+*.sql
+*.csv
+*.cast

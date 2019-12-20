@@ -2,17 +2,20 @@
 
 Command line utility to query JDBC-like databases with Clojure REPL.
 
-[![asciicast](https://asciinema.org/a/VJSgJNCN8irlaWuDDVnFa8Qjf.svg)](https://asciinema.org/a/VJSgJNCN8irlaWuDDVnFa8Qjf?autoplay=true&loop=true&speed=2&size=big&rows=15)
+[![asciicast](https://asciinema.org/a/LlFDoQFtDnvDPQnSHLSlgWlJz.svg)](https://asciinema.org/a/LlFDoQFtDnvDPQnSHLSlgWlJz?autoplay=true&loop=true&speed=2&size=big&rows=15)
 
 In a nutshell, it's just
 [next-jdbc](https://github.com/seancorfield/next-jdbc) + [rebel readline](https://github.com/bhauman/rebel-readline) + `clojure.pprint`,
 
 so big thanks to developers and maintainers of those tools.
 
+## Goals
+
 This tool can be a quite nice entry-point to Clojure REPL-driven development. The main goal is to keep it simple for the developers who
-are about to enter the joyful world of LISPS. 
+are only about to enter the joyful world of LISPS.
 It's not intended to replace the more complex tools like `DataGrip` or similar, but can be quite handy for something relatively small,
-especially when it comes to comparing/merging the results from different database engines.
+especially when it comes to comparing/merging the results from different database engines. It also allows you to avoid leaving
+cosy and warm terminal environment.
 
 ## Usage
 
@@ -101,6 +104,19 @@ Read more information about reducible results in the [next-jdbc documentation](h
 
 (->csv (q :h2 SELECT * FROM users) "results.csv")
 ; will save the results of the query lazily to "results.csv"
+```
+
+### 5. Interactive mode
+```clojure
+(qt :h2 SELECT * FROM users)
+(interact!)
+;...
+;SELECT *
+;FROM users
+;LIMIT 10;
+; -- will print the result as a table
+;stop;
+; -- will stop the interactive mode
 ```
 
 ## Context
